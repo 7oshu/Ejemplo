@@ -1,0 +1,284 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+</head>
+
+<body onload="_onload()" onresize="_onresize()" onbeforeunload="return _onbeforeunload()">
+
+    <!-----------------------Onblur--------------------------->
+
+    <p>Onblur</p>
+    <input type="text" id="fname" onblur="myFunction()">
+    <script>
+        function myFunction() {
+            let x = document.getElementById("fname");
+            x.value = x.value.toUpperCase();
+        }
+    </script>
+    <hr>
+    <!-------------------------------------------------------->
+
+
+    <!-----------------------Onchange--------------------------->
+
+    <p>Onchange</p>
+    <select id="mySelect" onchange="_onchange()">
+        <option value="Audi">Audi</option>
+        <option value="BMW">BMW</option>
+        <option value="Mercedes">Mercedes</option>
+        <option value="Volvo">Volvo</option>
+    </select>
+    <p id="prueba1"></p>
+    <script>
+        function _onchange() {
+            var x = document.getElementById("mySelect").value;
+            document.getElementById("prueba1").innerHTML = "You selected: " + x;
+        }
+    </script>
+    <hr>
+    <!-------------------------------------------------------->
+
+    <!-----------------------Onclick--------------------------->
+
+    <p>Onclick</p>
+    <button onclick="_onclick()">Click me</button>
+
+    <p id="prueba2"></p>
+
+    <script>
+        function _onclick() {
+            document.getElementById("prueba2").innerHTML = "Hello Onclick";
+        }
+    </script>
+    <hr>
+    <!-------------------------------------------------------->
+
+
+    <!-----------------------Ondblclick--------------------------->
+
+    <p>Ondblclick</p>
+    <button ondblclick="_ondblclick()">Click me</button>
+
+    <p id="prueba3"></p>
+
+    <script>
+        function _ondblclick() {
+            document.getElementById("prueba3").innerHTML = "Hello Ondblclick";
+        }
+    </script>
+    <hr>
+    <!-------------------------------------------------------->
+
+    <!-----------------------Onfocus--------------------------->
+
+    <p>Onfocus</p>
+    <input onfocus="_onfocus(this)" type="text">
+
+
+    <script>
+        function _onfocus(x) {
+            x.style.background = "yellow";
+        }
+    </script>
+    <hr>
+    <!-------------------------------------------------------->
+
+
+    <!-----------------------Onkeydown--------------------------->
+
+    <p>Onkeydown</p>
+    <input type="text" onkeydown="_onkeydown()">
+
+
+    <script>
+        function _onkeydown() {
+            alert("Has presionado una tecla");
+        }
+    </script>
+    <hr>
+    <!-------------------------------------------------------->
+    <!-----------------------Onkeypress--------------------------->
+
+    <input type="text" onkeypress="_onkeypress()">
+
+
+    <script>
+        function _onkeypress() {
+            alert("Has presionado una tecla");
+        }
+    </script>
+    <hr>
+    <!-------------------------------------------------------->
+
+    <!-----------------------Onkeyup--------------------------->
+
+    <p>Onkeyup</p>
+    <input type="text" id="prueba4" onkeyup="_onkeyup()">
+
+    <script>
+        function _onkeyup() {
+            var x = document.getElementById("prueba4");
+            x.value = x.value.toUpperCase();
+        }
+    </script>
+    <hr>
+    <!-------------------------------------------------------->
+
+
+    <!-----------------------Onload--------------------------->
+
+    <p>Onload</p>
+
+    <script>
+        function _onload() {
+            alert("Se ha logeado la pagina");
+        }
+    </script>
+    <hr>
+    <!-------------------------------------------------------->
+
+    <!-----------------------mouseDown/mouseUp--------------------------->
+
+    <p>mouseDown/mouseUp</p>
+    <p id="myP" onmousedown="mouseDown()" onmouseup="mouseUp()">Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Cumque, suscipit nobis. Similique nobis ut quos inventore, molestias rerum neque voluptatum sint esse
+        maiores ab fugiat architecto laborum! Eius, sequi. Ex!</p>
+
+    <script>
+        function mouseDown() {
+            document.getElementById("myP").style.color = "red";
+        }
+
+        function mouseUp() {
+            document.getElementById("myP").style.color = "green";
+        }
+    </script>
+    <hr>
+    <!-------------------------------------------------------->
+
+
+    <!-----------------------Onmouseover/Onmouseout--------------------------->
+
+    <p>Onmouseover/Onmouseout</p>
+    <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="" width="50px" height="40px">
+
+    <script>
+        function bigImg(x) {
+            x.style.height = "64px";
+            x.style.width = "64px";
+        }
+
+        function normalImg(x) {
+            x.style.height = "40px";
+            x.style.width = "50px";
+        }
+    </script>
+    <hr>
+    <!-------------------------------------------------------->
+
+    <!-----------------------Onmousemove--------------------------->
+
+    <p>Onmousemove</p>
+    <button onmousemove="_onmousemove(this)">Acerca el cursor</button>
+
+
+    <script>
+        function _onmousemove() {
+            alert("se hamovido el cursor")
+        }
+
+
+    </script>
+    <hr>
+    <!-------------------------------------------------------->
+
+    <!-----------------------Onreset--------------------------->
+    <form onreset="myFunction()">
+        <input type="text">
+        <input type="reset">
+    </form>
+
+    <script>
+        function myFunction() {
+            alert("Se resetea");
+        }
+    </script>
+    <hr>
+    <!-------------------------------------------------------->
+    <!-----------------------Onresize--------------------------->
+
+    <p>Onresize</p>
+    <p id="demo3"></p>
+
+    <script>
+        function _onresize() {
+            var res = "Width = " + window.outerWidth + "<br>" + "Height = " + window.outerHeight;
+            document.getElementById("demo3").innerHTML = res;
+        }
+    </script>
+    <hr>
+    <!-------------------------------------------------------->
+
+    <!-----------------------Onselect--------------------------->
+
+    <p>Onselect</p>
+    <input type="text" value="Hello world!" onselect="_onselect()">
+
+    <script>
+        function _onselect() {
+            alert("Has seleccionado");
+        }
+    </script>
+    <hr>
+    <!-------------------------------------------------------->
+
+    <!-----------------------Onsubmit--------------------------->
+
+    <p>Onsubmit</p>
+    <form action="" onsubmit="_onsubmit()">
+        <input type="text" name="fname">
+        <input type="submit" value="Enviar">
+    </form>
+
+    <script>
+        function _onsubmit() {
+            alert("Fue enviado");
+        }
+    </script>
+    <hr>
+    <!-------------------------------------------------------->
+
+    <!-----------------------Onsubmit--------------------------->
+
+    <p>Onsubmit</p>
+    <form action="" onsubmit="_onsubmit()">
+        <input type="text" name="fname">
+        <input type="submit" value="Enviar">
+    </form>
+
+    <script>
+        function _onsubmit() {
+            alert("Fue enviado");
+        }
+    </script>
+    <hr>
+    <!-------------------------------------------------------->
+
+    <!-----------------------Onbeforeunload--------------------------->
+
+    <script>
+
+        function _onbeforeunload() {
+            return "hola grabiel";
+        }
+    </script>
+
+    <!-------------------------------------------------------->
+
+
+</body>
+
+</html>
